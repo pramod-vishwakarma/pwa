@@ -15,11 +15,34 @@
 			::-webkit-scrollbar {
     			display: none;
 			}
+			.wrap {
+          overflow-x:hidden;
+        }
+        .slideInRight {
+          animation-name: slideInRight;
+        }
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		<div class="wrap">
+	  	<div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
@@ -61,11 +84,15 @@
 								</ul>
 								<ul class="features">
 									<li>
-										<a href="./store-near-you.html" style="border:0;"><img src="./images/shop.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"><a href="./store-near-you.html">
+										<a href="./store-near-you.html" style="border:0;"><img src="./images/shop.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
 										<a href="./store-near-you.html"><h3>Store Near You</h3></a>
 									</li>
 								</ul>
 							</section>
+							</div>
+						</div>
+					</div>
+				</div>
 							
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
