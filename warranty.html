@@ -10,7 +10,15 @@
 			label{
 				text-align:left;
 			}
+			::-webkit-scrollbar {
+    			display: none;
+			}
 		</style>
+		<script type="text/javascript">
+	      function goBack() {
+	        window.history.back();
+	      }
+    </script>
 	</head>
 	<body class="is-preload">
 
@@ -19,9 +27,13 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><a href="desktop.html"><img src="./images/skysoftglobal.png" alt="" /></a></span>
-						<!-- <h1>Maanya IT</h1> -->
-					</header>
+		            <ul style="display: flex;">
+		              <li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#636363;cursor: pointer;"></i>
+		              </a></li>
+		              <li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
+		            </ul>
+		            <!-- <h1>Maanya IT</h1> -->
+		          </header>
 
 				<!-- Nav -->
 					

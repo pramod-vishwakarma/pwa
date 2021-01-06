@@ -219,7 +219,8 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 1.25em;
+		/*font-size: 1.25em;*/
+		font-size: 1.2em;
 	}
 
 	h4 {
@@ -2440,13 +2441,13 @@ input, select, textarea {
 		}
 
 	ul {
-		list-style: disc;
+		/*list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-left: 1em;*/
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			/*padding-left: 0.5em;*/
 		}
 
 		ul.alt {
@@ -2821,7 +2822,8 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		width: calc(100% + 2em);
-		margin: 0 0 3em -2em;
+		/*margin: 0 0 3em -2em;*/
+		margin: 0 0 0.5em -2em;
 		padding: 0;
 		list-style: none;
 	}
@@ -3128,7 +3130,8 @@ input, select, textarea {
 				-ms-transition-delay: 0s;
 				transition-delay: 0s;
 				display: block;
-				margin: 0 0 1.5em 0;
+				/*margin: 0 0 1.5em 0;*/
+				margin: 0 0 0.5em 0;
 			}
 
 				#header.alt .logo img {
@@ -3193,7 +3196,8 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 1.5em 1.5em 0.5em 1.5em ;
+					padding: 1.5em 0em 0.5em 0em ;
+					/*padding: 1.5em 1.5em 0.5em 1.5em ;*/
 				}
 
 		}
@@ -3671,7 +3675,8 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#main > .main {
-				padding: 3em 1.5em 1em 1.5em ;
+				padding: 1em 1.5em 1em 1.5em ;
+				/*padding: 3em 1.5em 1em 1.5em ;*/
 			}
 
 				#main > .main > .image.main:first-child {

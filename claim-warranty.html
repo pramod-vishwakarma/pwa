@@ -10,18 +10,53 @@
 			label{
 				text-align:left;
 			}
+			::-webkit-scrollbar {
+    			display: none;
+			}
+			.wrap {
+          overflow-x:hidden;
+        }
+        .slideInRight {
+          animation-name: slideInRight;
+        }
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
 		</style>
+		<script type="text/javascript">
+	      function goBack() {
+	        window.history.back();
+	      }
+    </script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		<div class="wrap">
+	  		<div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><a href="desktop.html"><img src="./images/skysoftglobal.png" alt="" /></a></span>
-						<!-- <h1>Maanya IT</h1> -->
-					</header>
+		            <ul style="display: flex;">
+		              <li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#636363;cursor: pointer;"></i>
+		              </a></li>
+		              <li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
+		            </ul>
+		            <!-- <h1>Maanya IT</h1> -->
+		          </header>
 
 				<!-- Nav -->
 					
@@ -59,6 +94,8 @@
 							</section>
 
 					</div>
+				</div>
+			</div>
 
 				<!-- Footer -->
 					

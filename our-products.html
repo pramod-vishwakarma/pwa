@@ -10,22 +10,57 @@
 			.demo-product-box {
 				border: 1px solid #ddd;
 				padding: 20px;
-				height:140px;
+				height:100px;
 				width:140px;
 				margin:10px;
 			}
+			::-webkit-scrollbar {
+    			display: none;
+			}
+			.wrap {
+          overflow-x:hidden;
+        }
+        .slideInRight {
+          animation-name: slideInRight;
+        }
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
 		</style>
+		<script type="text/javascript">
+	      function goBack() {
+	        window.history.back();
+	      }
+    </script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		<div class="wrap">
+	  		<div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><a href="desktop.html"><img src="./images/skysoftglobal.png" alt="" /></a></span>
-						<!-- <h1>Maanya IT</h1> -->
-					</header>
+		            <ul style="display: flex;">
+		              <li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#636363;cursor: pointer;"></i>
+		              </a></li>
+		              <li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
+		            </ul>
+		            <!-- <h1>Maanya IT</h1> -->
+		          </header>
 
 				<!-- Nav -->
 					
@@ -43,33 +78,35 @@
                                 </header>
                                 <div class="form-group" style="display:flex">
 										<div class="demo-product-box">
-											<img src="./images/apple-air-pods.jpg" height="80px;" width="80">
+											<img src="./images/apple-air-pods.jpg" height="60px;" width="60">
 									</div>
 										<div class="demo-product-box">
-											<img src="./images/apple-iphone-se.jpg" height="80px;" >
+											<img src="./images/apple-iphone-se.jpg" height="60px;" >
 										</div>
 									
 								</div>
 								<div class="form-group"  style="display:flex">
 									<div class="demo-product-box">
-										<img src="./images/spa-gift-card.png" height="80px;" width="80">
+										<img src="./images/spa-gift-card.png" height="60px;" width="60">
 									</div>
 									<div class="demo-product-box">
-										<img src="./images/sony-play-station.jpg" height="80px;" width="80">
+										<img src="./images/sony-play-station.jpg" height="60px;" width="60">
 									</div>
 									
 								</div>
 								<div class="form-group" style="display:flex">
 								<div class="demo-product-box">
-										<img src="./images/starbucks-gift-card.jpg" height="80px" width="80">
+										<img src="./images/starbucks-gift-card.jpg" height="60px" width="60">
 									</div>
 									<div class="demo-product-box">
-										<img src="./images/visa.jpg" height="80px" width="80">
+										<img src="./images/visa.jpg" height="60px" width="60">
 								</div>
 								</div>
 							</section>
 
 					</div>
+				</div>
+			</div>
 
 				<!-- Footer -->
 					
