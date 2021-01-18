@@ -10,31 +10,68 @@
 			label{
 				text-align:left;
 			}
+			::-webkit-scrollbar {
+    			display: none;
+			}
+			.wrap {
+          overflow-x:hidden;
+        }
+        .slideInRight {
+          animation-name: slideInRight;
+        }
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+        header.major h2:after{
+        	margin-bottom: 0px;
+        }
 		</style>
+		<script type="text/javascript">
+	      function goBack() {
+	        window.history.back();
+	      }
+    </script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		<div class="wrap">
+	  		<div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><a href="desktop.html"><img src="./images/skysoftglobal.png" alt="" /></a></span>
-						<!-- <h1>Maanya IT</h1> -->
-					</header>
+		            <ul style="display: flex;">
+		              <li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#636363;cursor: pointer;"></i>
+		              </a></li>
+		              <li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
+		            </ul>
+		            <!-- <h1>Maanya IT</h1> -->
+		          </header>
 
 				<!-- Nav -->
 					
 
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Introduction -->
 
 						<!-- Get Started -->
 							<section id="cta" class="main special">
 								<header class="major">
-									<h2>Register Your Product Warranty</h2>
+									<h2 style="margin-bottom: 0px">Register Your Product Warranty</h2>
                                 </header>
                                 <form>
                                     <div class="form-group">
@@ -61,11 +98,17 @@
                                         <label>Invoice Date</label>
                                         <input type="Date" class="form-control"  placeholder="5/01/2021">
                                       </div>
-                                    <a class="button primary mt-5" href="desktop.html">Register Warranty</a>
+                                      <div class="form-group">
+                                        <label>Upload Bill</label>
+                                        <input type="file" class="form-control" style="width: 100%">
+                                      </div>
+                                    <a class="button primary mt-5" href="thank-you.html">Register Warranty</a>
                                   </form>
 							</section>
 
 					</div>
+				</div>
+			</div>
 
 				<!-- Footer -->
 					

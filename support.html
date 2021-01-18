@@ -34,6 +34,10 @@
 				    transform: translate3d(0, 0, 0);
 				  }
 				}
+
+                header.major h2:after{
+                    margin: 0;
+                }
 		</style>
 		<script type="text/javascript">
 			function goBack() {
@@ -66,27 +70,46 @@
 
 						<!-- Get Started -->
 							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Feedback</h2>
-                                </header>
+								<!-- <header class="major">
+									<h2>Support</h2>
+                                </header> -->
                                 <form>
                                     <div class="form-group">
-                                        <label>Customer Name</label>
-                                        <input type="text" class="form-control"  placeholder="Customer Name">
+                                        <label>Model Number</label>
+                                        <input type="text" class="form-control"  placeholder="Model Number">
                                       </div>
                                       <div class="form-group">
-                                        <label>Mobile</label>
-                                        <input type="tel" class="form-control"  placeholder="9876543210">
+                                        <label>Serial Number</label>
+                                        <input type="text" class="form-control"  placeholder="Serial Number">
                                       </div>
                                       <div class="form-group" style="margin-top:10px">
                                         <select class="custom-select">
-                                            <option selected>Model</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Issue</option>
+                                            <option value="1">Warranty</option>
+                                            <option value="2">Technical</option>
+                                            <option value="3">Billing</option>
+                                            <option value="4">Others</option>
                                           </select>
                                       </div>
-                                    <a class="button primary mt-5" href="feedback-next.html">Next</a>
+                                      <div><label>Upload Invoice</label></div>
+                                      <div class="row form-group">
+                                        
+                                        <div class="col-8">
+                                           <input type="file">
+                                      </div>
+                                            <div class="col-4">
+                                                <a class="button primary" style="line-height: 40px;height: 40px;font-size: 14px;">Upload</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Invoice Number</label>
+                                            <input type="text" class="form-control"  placeholder="Invoice Number">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Describe Your Problem </label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 100px;"></textarea>
+                                          </div>
+                                    <a class="button primary mt-5" href="support-register.html">Submit</a>
                                   </form>
 							</section>
 

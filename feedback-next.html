@@ -14,20 +14,55 @@
       h5{
         text-align:left;
         font-size:15px;
+        margin-bottom:  0.2em;
       }
-      
+      ::-webkit-scrollbar {
+          display: none;
+      }
+      .wrap {
+          overflow-x:hidden;
+        }
+        .slideInRight {
+          animation-name: slideInRight;
+        }
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
 		</style>
+    <script type="text/javascript">
+      function goBack() {
+        window.history.back();
+      }
+    </script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+    <div class="wrap">
+    <div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><a href="desktop.html"><img src="./images/skysoftglobal.png" alt="" /></a></span>
-						<!-- <h1>Maanya IT</h1> -->
-					</header>
+            <ul style="display: flex;">
+              <li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#636363;cursor: pointer;"></i>
+              </a></li>
+              <li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
+            </ul>
+            <!-- <h1>Maanya IT</h1> -->
+          </header>
 
 				<!-- Nav -->
 					
@@ -110,12 +145,14 @@
                                         <label for="exampleFormControlTextarea1">Comments</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 100px;"></textarea>
                                       </div>
-                                    <a href="thank-you.html" class="button primary mt-5">Submit</a>
+                                    <a href="feedback-thank-you.html" class="button primary mt-5">Submit</a>
                                   </form>
 
 							</section>
 
 					</div>
+        </div>
+      </div>
 
 				<!-- Footer -->
 					

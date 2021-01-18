@@ -6,15 +6,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style type="text/css">
+			.features li{
+				display: inline-block;
+				width:50%;
+				padding-left: 30px;
+			}
+			::-webkit-scrollbar {
+    			display: none;
+			}
+			.wrap {
+          overflow-x:hidden;
+        }
+        .slideInRight {
+          animation-name: slideInRight;
+        }
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+          }
+
+          to {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
+		<div class="wrap">
+	  	<div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><a href="desktop.html"><img src="./images/skysoftglobal.png" alt="" /></a></span>
+						<ul style="display: flex;">
+							<li><span><a href="desktop.html"><i class="fa fa-arrow-left" aria-hidden="true" style="color: #636363"></i>
+							</a></span></li>
+							<li><span class="logo"><a href="desktop.html"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
+						</ul>
 						<!-- <h1>Maanya IT</h1> -->
 					</header>
 
@@ -23,36 +60,43 @@
 					<div id="main">
 
 						<!-- Introduction -->
-						<!-- First Section -->
+
 							<section id="first" class="main special">
-								<header class="major">
-									<h2>Category</h2>
-								</header>
 								<ul class="features">
 									<li>
-										
-
-										<span class="icon solid major style5 fa-shield-alt"></span>
+										<a href="./warranty.html" style="border:0;"><img src="./images/warranty.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
 										<a href="./warranty.html"><h3>Warranty</h3></a>
 									</li>
 									<li>
-										<span class="icon major style3 fa-copy"></span>
+										<a href="./feedback.html" style="border:0;"><img src="./images/feedback.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
 										<a href="./feedback.html"><h3>Feedback</h3></a>
 									</li>
+								</ul>
+								<ul class="features">
 									<li>
-										<span class="icon major style5 fa-gem"></span>
+										<a href="./claim-warranty.html" style="border:0;"><img src="./images/claim.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
 										<a href="./claim-warranty.html"><h3>Claim Warranty</h3></a>
 									</li>
 									<li>
-										<span class="icon major style5 fa-clipboard"></span>
+										<a href="./support.html" style="border:0;"><img src="./images/24-hours-support.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
+										<a href="./support.html"><h3>Support</h3></a>
+									</li>
+								</ul>
+								<ul class="features">
+									<li>
+										<a href="./our-products.html" style="border:0;"><img src="./images/shipping.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
 										<a href="./our-products.html"><h3>Our Products</h3></a>
 									</li>
 									<li>
-										<span class="icon major style5 fa-gem"></span>
+										<a href="./store-near-you.html" style="border:0;"><img src="./images/shop.svg" class="icon solid major style5" style="height: 90px;width: 90px;padding: 8px;cursor: pointer;"></a>
 										<a href="./store-near-you.html"><h3>Store Near You</h3></a>
 									</li>
 								</ul>
 							</section>
+							</div>
+						</div>
+					</div>
+				</div>
 							
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
