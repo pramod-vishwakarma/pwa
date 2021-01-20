@@ -3478,7 +3478,8 @@ input, select, textarea {
     		border-color: #dddddd;
     		width: 100%;
 		    border: 1px solid #ddd;
-    		border-radius: 3px;
+			border-radius: 3px;
+			padding-left: 10px;
 		}
 
 			#main input[type="text"]:focus,
