@@ -140,6 +140,20 @@
 				border-right:0 !important;
 				background-color: white !important;
 			}
+            .circular-file{
+                display: none;
+            }
+            .circular-label{
+                cursor: pointer;
+                padding: 28px 10px;
+                color: #fff;
+                width: 150px;
+                height:150px;
+                text-align: center;
+                margin: 0 auto;
+                background: #ddd;
+                border-radius: 50%;
+            }
 		</style>
 		<script type="text/javascript">
 	      function goBack() {
@@ -198,34 +212,24 @@
 									<h2>Register Warranty</h2>
 								</div>
 								
-								<ul class="features">
-									<li style=" width: calc(30%);">
-										<img src="images/apple-air-pods.jpg" class="product-img">
-									</li>
-									<li style=" width: calc(70%)">
-										<p class="text-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, magnam vitae et id ratione amet dicta.
-											<span class="serial-no">Serial No: M1248628346826348289</span>
-										</p>
-									</li>
-								</ul>
-								<div class="active-warranty">
-									<h2>6 Month Warranty</h2>
-								</div>
 								<form style="text-align: left;">
 									<div class="form-group mt-3">
-									<label>Name*</label>
-									<input type="text" name="name" placeholder="Enter your name" required>
-									<small style="text-align: left;">Who would receive the acknowledgement</small>
+									<label>Purchase Date *</label>
+									<input type="date" name="date" required>
+									<small style="text-align: left;">Date, when this item was purchased</small>
 									</div>
 									<div class="form-group mt-3">
-										<label>Email*</label>
-										<input type="email" name="email" placeholder="Enter your email" required>
-										<small style="text-align: left;">Email to receive the acknowledgement receipt</small>
+                                        <label>Invoice Copy*</label>
+										<label class="circular-label">Invoice / Bill Photo
+                                            <img src="images/bill-1.png" style="margin: 0 auto;display:block">
+										<input type="file" class="circular-file">
+                                        <img src="images/image-picker.png" style="position: absolute;margin: 0px 0 0px 25px;">
+                                    </label>
+										<div style="text-align: left;margin-top:15px;">Email to receive the acknowledgement receipt</div>
 										</div>
 										<div class="form-group mt-3">
-											<label>Phone*</label>
-											<input type="text" name="name" placeholder="Enter your phone number" required>
-											<small style="text-align: left;">Where to contact you when required</small>
+											
+											<div style="text-align: left;border-bottom:1px solid #ddd ;">Required to validate purchase</div>
 											</div>
 											<div class="text-center mt-5">
 												<a class="button primary mt-5" href="register-warranty.html">Register Warranty</a>
