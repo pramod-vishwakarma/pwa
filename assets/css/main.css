@@ -106,6 +106,14 @@ input, select, textarea {
 .text-center{
 	text-align: center !important;
 }
+.thank-you-text{
+	font-size: 30px !important;
+	font-weight: 600;
+	text-align: center;
+	color: #1266f1;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
 /* Basic */
 
 	@-ms-viewport {
@@ -2358,6 +2366,7 @@ input, select, textarea {
 			/* color: #8cc9f0; */
 			color:#1266f1;
 		}
+
 
 		@media screen and (max-width: 1680px) {
 
