@@ -9,7 +9,13 @@
 		<style>
 			label{
 				text-align:left;
+				color: #222;
 			}
+			input, select, textarea {
+    color: inherit;
+}
+
+
 			::-webkit-scrollbar {
     			display: none;
 			}
@@ -37,45 +43,7 @@
         header.major h2:after{
         	margin-bottom: 0px;
         }
-		.tab2 {
-			overflow: hidden;
-			/* border: 1px solid #ccc; */
-			/* background-color: #f1f1f1; */
-			}
-
-			/* Style the buttons inside the tab */
-			.tab2 button {
-			background-color: #FFF;
-			float: left;
-			border: none;
-			outline: none;
-			border-radius: 0;
-			cursor: pointer;
-			padding: 0px 25px;
-			color:#636363 !important;
-			transition: 0.3s;
-			font-size: 15px;
-			}
-
-			/* Change background color of buttons on hover */
-			.tab2 button:hover {
-			background-color: #ddd;
-			}
-
-			/* Create an active/current tablink class */
-			.tab2 button.active {
-				border-radius: 0;
-    			color: #1266f1 !important;
-    			border-color: #1266f1;
-    			border-bottom: 2px solid;
-			}
-
-			/* Style the tab content */
-			.tabcontent {
-			display: none;
-			padding: 6px 12px;
-			border-top: none;
-			}
+		
 			
 			#regForm {
 			background-color: #ffffff;
@@ -140,6 +108,96 @@
 				border-right:0 !important;
 				background-color: white !important;
 			}
+			/* #regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+} */
+
+h1 {
+  text-align: center;  
+}
+
+/* input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+} */
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  display: none;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+#main input{
+				border-top: 0 !important;
+				border-left: 0 !important;
+				border-right:0 !important;
+				background-color: white !important;
+			}
+            .circular-file{
+                display: none;
+            }
+            .circular-label{
+                cursor: pointer;
+                padding: 28px 10px;
+                color: #fff;
+                width: 150px;
+                height:150px;
+                text-align: center;
+                margin: 0 auto;
+                background: #ddd;
+                border-radius: 50%;
+            }
 		</style>
 		<script type="text/javascript">
 	      function goBack() {
@@ -212,13 +270,15 @@
 									<h2>6 Month Warranty</h2>
 								</div>
 								<form style="text-align: left;">
-									<div class="form-group mt-3">
-									<label>Name*</label>
-									<input type="text" name="name" placeholder="Enter your name" required>
-									<small style="text-align: left;">Who would receive the acknowledgement</small>
-									</div>
-									<div class="form-group mt-3">
-										<label>Email*</label>
+									<!-- One "tab" for each step in the form: -->
+									<div class="tab">
+										<div class="form-group mt-3">
+											<label>Name*</label>
+											<input type="text" name="name" placeholder="Enter your name" required>
+											<small style="text-align: left;">Who would receive the acknowledgement</small>
+											</div>
+											<div class="form-group mt-3">
+											<label>Email*</label>
 										<input type="email" name="email" placeholder="Enter your email" required>
 										<small style="text-align: left;">Email to receive the acknowledgement receipt</small>
 										</div>
@@ -227,6 +287,56 @@
 											<input type="text" name="name" placeholder="Enter your phone number" required>
 											<small style="text-align: left;">Where to contact you when required</small>
 											</div>
+									</div>
+									<div class="tab">
+										<div class="form-group mt-3">
+											<label>Purchase Date *</label>
+											<input type="date" name="date" required>
+											<small style="text-align: left;">Date, when this item was purchased</small>
+											</div>
+											<div class="form-group mt-3">
+												<label>Invoice Copy*</label>
+												<label class="circular-label">Invoice / Bill Photo
+													<img src="images/bill-1.png" style="margin: 0 auto;display:block">
+												<input type="file" class="circular-file">
+												<img src="images/image-picker.png" style="position: absolute;margin: 0px 0 0px 25px;">
+											</label>
+												<div style="text-align: left;margin-top:15px;">Email to receive the acknowledgement receipt</div>
+												</div>
+												<div class="form-group mt-3">
+													
+													<div style="text-align: left;border-bottom:1px solid #ddd ;">Required to validate purchase</div>
+													</div>
+													
+									</div>
+									<!-- <div class="tab">Birthday:
+									  <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+									  <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+									  <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+									</div>
+									<div class="tab">Login Info:
+									  <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+									  <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+									</div> -->
+									<div style="overflow:auto;">
+									  <div class="text-center">
+										<button type="button"  class="button primary mt-5" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+										<button type="button" class="button primary mt-5" id="nextBtn" onclick="nextPrev(1)">Next</button>
+									  </div>
+									</div>
+									<!-- Circles which indicates the steps of the form: -->
+									<div style="text-align:center;margin-top:40px;">
+									  <span class="step"></span>
+									  <span class="step"></span>
+									  <span class="step"></span>
+									  <span class="step"></span>
+									</div>
+								  </form>
+								<form style="text-align: left;">
+									
+									<div class="form-group mt-3">
+										
+											
 											<div class="text-center mt-5">
 												<a class="button primary mt-5" href="register-warranty.html">Register Warranty</a>
 											</div>
