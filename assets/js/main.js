@@ -122,6 +122,9 @@
 
 })(jQuery);
 
+
+//==================== multistep form start=====================
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -194,3 +197,8 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
+//================== mutlistep form end=================
+
+
+
+

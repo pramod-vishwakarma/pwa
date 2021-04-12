@@ -114,6 +114,46 @@ input, select, textarea {
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
+.navbar {
+	background-color: #fff;
+	border:1px solid #ddd;
+	border-top: 0px;
+	overflow: hidden;
+	color: #000;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+	float: left;
+	/* display: block; */
+	display: grid;
+	color: #333;
+	text-align: center;
+	padding: 8px 21px;
+	text-decoration: none;
+	font-size: 15px;
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+	background-color: #ddd;
+	color: #000 !important;
+  }
+  
+  /* Add a color to the active/current link */
+  .navbar a.active {
+	background-color: #1266f1;
+	color: white;
+  }
+
 /* Basic */
 
 	@-ms-viewport {
