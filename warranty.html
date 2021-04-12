@@ -1,114 +1,125 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Maanya IT</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			label{
-				text-align:left;
-				color: #222;
+
+<head>
+	<title>Maanya IT</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		label {
+			text-align: left;
+			color: #222;
+		}
+
+		input,
+		select,
+		textarea {
+			color: inherit;
+		}
+
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+
+		.wrap {
+			overflow-x: hidden;
+		}
+
+		.slideInRight {
+			animation-name: slideInRight;
+		}
+
+		.animated {
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+
+		@keyframes slideInRight {
+			from {
+				transform: translate3d(100%, 0, 0);
+				visibility: visible;
 			}
-			input, select, textarea {
-    color: inherit;
-}
 
-
-			::-webkit-scrollbar {
-    			display: none;
+			to {
+				transform: translate3d(0, 0, 0);
 			}
-			.wrap {
-          overflow-x:hidden;
-        }
-        .slideInRight {
-          animation-name: slideInRight;
-        }
-        .animated {
-          animation-duration: 1s;
-          animation-fill-mode: both;
-        }
+		}
 
-        @keyframes slideInRight {
-          from {
-            transform: translate3d(100%, 0, 0);
-            visibility: visible;
-          }
+		header.major h2:after {
+			margin-bottom: 0px;
+		}
 
-          to {
-            transform: translate3d(0, 0, 0);
-          }
-        }
-        header.major h2:after{
-        	margin-bottom: 0px;
-        }
-		
-			
-			#regForm {
+
+		#regForm {
 			background-color: #ffffff;
 			margin: 10px auto;
-			}
+		}
 
-			h1 {
-			text-align: center;  
-			}
+		h1 {
+			text-align: center;
+		}
 
-			/* Mark input boxes that gets an error on validation: */
-			input.invalid {
+		/* Mark input boxes that gets an error on validation: */
+		input.invalid {
 			background-color: #ffdddd;
-			}
+		}
 
-			/* Hide all steps by default: */
-			.tab {
+		/* Hide all steps by default: */
+		.tab {
 			display: none;
-			}
+		}
 
-			button {
+		button {
 			background-color: #4CAF50;
 			color: #ffffff;
 			border: none;
 			/* padding: 10px 20px; */
 			font-size: 17px;
 			cursor: pointer;
-			}
+		}
 
-			button:hover {
+		button:hover {
 			opacity: 0.8;
 			background-color: #4CAF50;
-			}
+		}
 
-			#prevBtn {
+		#prevBtn {
 			background-color: #bbbbbb;
-			}
+		}
 
-			/* Make circles that indicate the steps of the form: */
-			.step {
+		/* Make circles that indicate the steps of the form: */
+		.step {
 			height: 15px;
 			width: 15px;
 			margin: 0 2px;
 			background-color: #bbbbbb;
-			border: none;  
+			border: none;
 			border-radius: 50%;
 			display: inline-block;
 			opacity: 0.5;
-			}
+		}
 
-			.step.active {
+		.step.active {
 			opacity: 1;
-			}
+		}
 
-			/* Mark the steps that are finished and valid: */
-			.step.finish {
+		/* Mark the steps that are finished and valid: */
+		.step.finish {
 			background-color: #4CAF50;
-			}
-			#main input{
-				border-top: 0 !important;
-				border-left: 0 !important;
-				border-right:0 !important;
-				background-color: white !important;
-			}
-			/* #regForm {
+		}
+
+		#main input {
+			border-top: 0 !important;
+			border-left: 0 !important;
+			border-right: 0 !important;
+			background-color: white !important;
+		}
+
+		/* #regForm {
   background-color: #ffffff;
   margin: 100px auto;
   font-family: Raleway;
@@ -117,11 +128,11 @@
   min-width: 300px;
 } */
 
-h1 {
-  text-align: center;  
-}
+		h1 {
+			text-align: center;
+		}
 
-/* input {
+		/* input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
@@ -129,187 +140,198 @@ h1 {
   border: 1px solid #aaaaaa;
 } */
 
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
-}
+		/* Mark input boxes that gets an error on validation: */
+		input.invalid {
+			background-color: #ffdddd;
+		}
 
-/* Hide all steps by default: */
-.tab {
-  display: none;
-}
+		/* Hide all steps by default: */
+		.tab {
+			display: none;
+		}
 
-button {
-  background-color: #4CAF50;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer;
-}
+		button {
+			background-color: #4CAF50;
+			color: #ffffff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 17px;
+			font-family: Raleway;
+			cursor: pointer;
+		}
 
-button:hover {
-  opacity: 0.8;
-}
+		button:hover {
+			opacity: 0.8;
+		}
 
-#prevBtn {
-  background-color: #bbbbbb;
-}
+		#prevBtn {
+			background-color: #bbbbbb;
+		}
 
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;  
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-  display: none;
-}
+		/* Make circles that indicate the steps of the form: */
+		.step {
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbbbbb;
+			border: none;
+			border-radius: 50%;
+			display: inline-block;
+			opacity: 0.5;
+			display: none;
+		}
 
-.step.active {
-  opacity: 1;
-}
+		.step.active {
+			opacity: 1;
+		}
 
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #4CAF50;
-}
-#main input{
-				border-top: 0 !important;
-				border-left: 0 !important;
-				border-right:0 !important;
-				background-color: white !important;
-			}
-            .circular-file{
-                display: none;
-            }
-            .circular-label{
-                cursor: pointer;
-                padding: 28px 10px;
-                color: #fff;
-                width: 150px;
-                height:150px;
-                text-align: center;
-                margin: 0 auto;
-                background: #ddd;
-                border-radius: 50%;
-            }
-		</style>
-		<script type="text/javascript">
-	      function goBack() {
-	        window.history.back();
-	      }
+		/* Mark the steps that are finished and valid: */
+		.step.finish {
+			background-color: #4CAF50;
+		}
 
-		  function openRegister(evt, regName) {
-			var i, tabcontent, tablinks;
-			tabcontent = document.getElementsByClassName("tabcontent");
-			for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			}
-			tablinks = document.getElementsByClassName("tablinks");
-			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" active", "");
-			}
-			document.getElementById(regName).style.display = "block";
-			evt.currentTarget.className += " active";
-			}
+		#main input {
+			border-top: 0 !important;
+			border-left: 0 !important;
+			border-right: 0 !important;
+			background-color: white !important;
+		}
 
-			// Get the element with id="defaultOpen" and click on it
-			document.getElementById("defaultOpen").click();
+		.circular-file {
+			display: none;
+		}
 
-			function myOtp() {
-  				document.getElementById("otpMsg").innerHTML = "Otp sent on your given number";
-			}
-    </script>
-	</head>
-	<body class="is-preload">
+		.circular-label {
+			cursor: pointer;
+			padding: 28px 10px;
+			color: #fff;
+			width: 150px;
+			height: 150px;
+			text-align: center;
+			margin: 0 auto;
+			background: #ddd;
+			border-radius: 50%;
+		}
+	</style>
+	<script type="text/javascript">
+		//   function goBack() {
+		//     window.history.back();
+		//   }
 
-		<!-- Wrapper -->
-		<div class="wrap">
-	  		<div class="slideInRight animated">
+		//   function openRegister(evt, regName) {
+		// 	var i, tabcontent, tablinks;
+		// 	tabcontent = document.getElementsByClassName("tabcontent");
+		// 	for (i = 0; i < tabcontent.length; i++) {
+		// 		tabcontent[i].style.display = "none";
+		// 	}
+		// 	tablinks = document.getElementsByClassName("tablinks");
+		// 	for (i = 0; i < tablinks.length; i++) {
+		// 		tablinks[i].className = tablinks[i].className.replace(" active", "");
+		// 	}
+		// 	document.getElementById(regName).style.display = "block";
+		// 	evt.currentTarget.className += " active";
+		// 	}
+
+		// 	// Get the element with id="defaultOpen" and click on it
+		// 	document.getElementById("defaultOpen").click();
+
+		// 	function myOtp() {
+		// 		document.getElementById("otpMsg").innerHTML = "Otp sent on your given number";
+		// 	}
+	</script>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div class="wrap">
+		<div class="slideInRight animated">
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
-		            <ul style="display: flex;">
-		              <li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true" style="color:#636363;cursor: pointer;"></i>
-		              </a></li>
-		              <li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span></li>
-		            </ul>
-		            <!-- <h1>Maanya IT</h1> -->
-		          </header>
+				<header id="header" class="alt">
+					<ul style="display: flex;">
+						<li><a onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"
+									style="color:#636363;cursor: pointer;"></i>
+							</a></li>
+						<li><span class="logo"><a href="#"><img src="./images/maanyait-logo.png" alt="" /></a></span>
+						</li>
+					</ul>
+					<!-- <h1>Maanya IT</h1> -->
+				</header>
 
 				<!-- Nav -->
-				
+
 
 				<!-- Main -->
-					<div id="main">
-						<!-- Introduction -->
+				<div id="main">
+					<!-- Introduction -->
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<div class="text-center mt-3">
-									<h2>Register Warranty</h2>
+					<!-- Get Started -->
+					<section id="cta" class="main special">
+						<div class="text-center mt-3">
+							<h2>Register Warranty</h2>
+						</div>
+
+						<ul class="features">
+							<li style=" width: calc(30%);">
+								<img src="images/apple-air-pods.jpg" class="product-img">
+							</li>
+							<li style=" width: calc(70%)">
+								<p class="text-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Cupiditate, magnam vitae et id ratione amet dicta.
+									<span class="serial-no">Serial No: M1248628346826348289</span>
+								</p>
+							</li>
+						</ul>
+						<div class="active-warranty">
+							<h2>6 Month Warranty</h2>
+						</div>
+						<form style="text-align: left;">
+							<!-- One "tab" for each step in the form: -->
+							<div class="tab">
+								<div class="form-group mt-3">
+									<label>Name*</label>
+									<input type="text" name="name" placeholder="Enter your name" required>
+									<small style="text-align: left;">Who would receive the acknowledgement</small>
 								</div>
-								
-								<ul class="features">
-									<li style=" width: calc(30%);">
-										<img src="images/apple-air-pods.jpg" class="product-img">
-									</li>
-									<li style=" width: calc(70%)">
-										<p class="text-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, magnam vitae et id ratione amet dicta.
-											<span class="serial-no">Serial No: M1248628346826348289</span>
-										</p>
-									</li>
-								</ul>
-								<div class="active-warranty">
-									<h2>6 Month Warranty</h2>
+								<div class="form-group mt-3">
+									<label>Email*</label>
+									<input type="email" name="email" placeholder="Enter your email" required>
+									<small style="text-align: left;">Email to receive the acknowledgement
+										receipt</small>
 								</div>
-								<form style="text-align: left;">
-									<!-- One "tab" for each step in the form: -->
-									<div class="tab">
-										<div class="form-group mt-3">
-											<label>Name*</label>
-											<input type="text" name="name" placeholder="Enter your name" required>
-											<small style="text-align: left;">Who would receive the acknowledgement</small>
-											</div>
-											<div class="form-group mt-3">
-											<label>Email*</label>
-										<input type="email" name="email" placeholder="Enter your email" required>
-										<small style="text-align: left;">Email to receive the acknowledgement receipt</small>
-										</div>
-										<div class="form-group mt-3">
-											<label>Phone*</label>
-											<input type="text" name="name" placeholder="Enter your phone number" required>
-											<small style="text-align: left;">Where to contact you when required</small>
-											</div>
-									</div>
-									<div class="tab">
-										<div class="form-group mt-3">
-											<label>Purchase Date *</label>
-											<input type="date" name="date" required>
-											<small style="text-align: left;">Date, when this item was purchased</small>
-											</div>
-											<div class="form-group mt-3">
-												<label>Invoice Copy*</label>
-												<label class="circular-label">Invoice / Bill Photo
-													<img src="images/bill-1.png" style="margin: 0 auto;display:block">
-												<input type="file" class="circular-file">
-												<img src="images/image-picker.png" style="position: absolute;margin: 0px 0 0px 25px;">
-											</label>
-												<div style="text-align: left;margin-top:15px;">Email to receive the acknowledgement receipt</div>
-												</div>
-												<div class="form-group mt-3">
-													
-													<div style="text-align: left;border-bottom:1px solid #ddd ;">Required to validate purchase</div>
-													</div>
-													
-									</div>
-									<!-- <div class="tab">Birthday:
+								<div class="form-group mt-3">
+									<label>Phone*</label>
+									<input type="text" name="name" placeholder="Enter your phone number" required>
+									<small style="text-align: left;">Where to contact you when required</small>
+								</div>
+							</div>
+							<div class="tab">
+								<div class="form-group mt-3">
+									<label>Purchase Date *</label>
+									<input type="date" name="date" required>
+									<small style="text-align: left;">Date, when this item was purchased</small>
+								</div>
+								<div class="form-group mt-3">
+									<label>Invoice Copy*</label>
+									<label class="circular-label">Invoice / Bill Photo
+										<img src="images/bill-1.png" style="margin: 0 auto;display:block">
+										<input type="file" class="circular-file">
+										<img src="images/image-picker.png"
+											style="position: absolute;margin: 0px 0 0px 25px;">
+									</label>
+									<div style="text-align: left;margin-top:15px;">Email to receive the acknowledgement
+										receipt</div>
+								</div>
+								<div class="form-group mt-3">
+
+									<div style="text-align: left;border-bottom:1px solid #ddd ;">Required to validate
+										purchase</div>
+								</div>
+
+							</div>
+							<!-- <div class="tab">Birthday:
 									  <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
 									  <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
 									  <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
@@ -318,21 +340,23 @@ button:hover {
 									  <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
 									  <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
 									</div> -->
-									<div style="overflow:auto;">
-									  <div class="text-center">
-										<button type="button"  class="button primary mt-5" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-										<button type="button" class="button primary mt-5" id="nextBtn" onclick="nextPrev(1)">Next</button>
-									  </div>
-									</div>
-									<!-- Circles which indicates the steps of the form: -->
-									<div style="text-align:center;margin-top:40px;">
-									  <span class="step"></span>
-									  <span class="step"></span>
-									  <span class="step"></span>
-									  <span class="step"></span>
-									</div>
-								  </form>
-								<form style="text-align: left;">
+							<div style="overflow:auto;">
+								<div class="text-center" style="margin-bottom: 2rem;">
+									<button type="button" class="button primary mt-5" id="prevBtn"
+										onclick="nextPrev(-1)">Previous</button>
+									<button type="button" class="button primary mt-5" id="nextBtn"
+										onclick="nextPrev(1)">Next</button>
+								</div>
+							</div>
+							<!-- Circles which indicates the steps of the form: -->
+							<div style="text-align:center;margin-top:40px; display: none;">
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+							</div>
+						</form>
+						<!-- <form style="text-align: left;">
 									
 									<div class="form-group mt-3">
 										
@@ -340,23 +364,23 @@ button:hover {
 											<div class="text-center mt-5">
 												<a class="button primary mt-5" href="register-warranty.html">Register Warranty</a>
 											</div>
-								</form>
-								<!-- <header class="major">
+								</form> -->
+						<!-- <header class="major">
 									<h2 style="margin-bottom: 0px">Register Your Product Warranty</h2> -->
-									<!-- <div class="tab2">
+						<!-- <div class="tab2">
 										<button class="tablinks" onclick="openRegister(event, 'register')" id="defaultOpen">Register</button>
 										<button class="tablinks" onclick="openRegister(event, 'claim')">Claim</button>
 										<button class="tablinks" onclick="openRegister(event, 'status')">Status</button>
 									  </div>
 									  
 									  <div id="register" class="tabcontent" style="display: block;"> -->
-										<!-- <h3>register</h3> -->
-										<!-- <form id="regForm">
+						<!-- <h3>register</h3> -->
+						<!-- <form id="regForm">
 											<header class="major">
 											<h2 style="margin-bottom: 0px;font-size: 18px;">Register Your Product Warranty</h2>
 											</header> -->
-											<!-- One "tab" for each step in the form: -->
-											<!-- <div class="tab">:
+						<!-- One "tab" for each step in the form: -->
+						<!-- <div class="tab">:
 												<div class="form-group">
 													<label>Enter Your Mobile Number</label>
 													<input type="tel" class="form-control"  placeholder="987654321">
@@ -407,19 +431,19 @@ button:hover {
 												  </div>
 												<a class="button primary mt-5" href="thank-you.html">Register Warranty</a>
 											</div> -->
-											<!-- <div style="overflow:auto;">
+						<!-- <div style="overflow:auto;">
 											  <div style="float:right;">
 												<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
 												<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
 											  </div>
 											</div> -->
-											<!-- Circles which indicates the steps of the form: -->
-											<!-- <div style="text-align:center;margin-top:20px;">
+						<!-- Circles which indicates the steps of the form: -->
+						<!-- <div style="text-align:center;margin-top:20px;">
 											  <span class="step" style="display: none;"></span>
 											  <span class="step"  style="display: none;"></span>
 											</div>
 										  </form> -->
-										<!-- <form>
+						<!-- <form>
 											<div class="form-group">
 												<label>Enter Your Mobile Number</label>
 												<input type="tel" class="form-control"  placeholder="987654321">
@@ -442,7 +466,7 @@ button:hover {
 										<form>
 											
 										  </form> -->
-									  <!-- </div>
+						<!-- </div>
 									  
 									  <div id="claim" class="tabcontent">
 										<h3>claim</h3>
@@ -454,25 +478,36 @@ button:hover {
 										<p>status is the capital of Japan.</p>
 									  </div>
 								</header> -->
+						<div class="navbar">
+							<a href="#home" class="active"><i class="fa fa-home" aria-hidden="true"></i>
+								Home
+							</a>
+							<a href="#news"><i class="fa fa-home" aria-hidden="true"></i>
+								News</a>
+							<a href="#contact"><i class="fa fa-home" aria-hidden="true"></i>
+								Contact</a>
+							<a href="#contact"><i class="fa fa-home" aria-hidden="true"></i>
+								Contact</a>
+						</div>
+					</section>
 
-                                
-							</section>
 
-					</div>
 				</div>
 			</div>
+		</div>
 
-				<!-- Footer -->
-					
+		<!-- Footer -->
+
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
