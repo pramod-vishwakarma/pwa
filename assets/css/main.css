@@ -3439,6 +3439,9 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		height: 100vh;
+		overflow-y: scroll;
+
 	}
 
 		#main input, #main select, #main textarea {
